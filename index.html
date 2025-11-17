@@ -86,17 +86,18 @@ Bagian dari website utama Yayasan Minnatul Huda.
       .animate-fade-in-zoom { animation: fade-in-zoom 0.3s ease-out forwards; }
       .animate-fade-out { animation: fade-out 0.3s ease-out forwards; }
 
-      /* Enhanced Navigation Animations */
+      /* --- Enhanced Navigation Animations --- */
+      /* Underline grows from center on hover */
       .nav-link-underline::after {
         content: '';
         position: absolute;
-        bottom: -2px;
+        bottom: 0; /* Adjusted for better alignment */
         left: 0;
         right: 0;
         margin: auto;
         width: 0%;
         height: 2px;
-        background-color: #10B981; /* Emerald-500 */
+        background-color: #059669; /* emerald-600 */
         transition: width 0.3s ease-in-out;
       }
       .nav-link-underline:hover::after,
@@ -104,6 +105,14 @@ Bagian dari website utama Yayasan Minnatul Huda.
         width: 100%;
       }
 
+      /* Desktop dropdown animation */
+      @keyframes dropdown-fade-in {
+        from { opacity: 0; transform: translateY(-5px) scale(0.98); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-dropdown-fade-in { animation: dropdown-fade-in 0.2s ease-out forwards; }
+
+      /* Mobile menu animations */
       @keyframes slide-in-right {
         from { transform: translateX(100%); }
         to { transform: translateX(0); }
@@ -179,7 +188,7 @@ Bagian dari website utama Yayasan Minnatul Huda.
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-ChDknSef.js"></script>
+  <script type="module" crossorigin src="./assets/index-TLjZN43j.js"></script>
 </head>
 <body class="bg-stone-50 text-gray-800">
     <div id="root"></div>
